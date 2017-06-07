@@ -14,7 +14,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
         sign_in(:user, @profile.user)
       else
         @profile = SocialProfile.new(provider: @omniauth['provider'], uid: @omniauth['uid'])
-        email = @omniauth['info']['email'] ? @omniauth['info']['email'] : Faker::Internet.email
+        email = @omniauth['info']['email'] ? @omniauth['info']['email'] : 'hogehoge123@gmail.com'
         @profile.user = current_user || User.create!(email: email, name: @omniauth['info']['name'], password: Devise.friendly_token[0, 20])
         @profile.set_values(@omniauth)
         sign_in(:user, @profile.user)
