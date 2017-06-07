@@ -6,7 +6,6 @@ git_source(:github) do |repo_name|
 end
 
 gem 'devise'
-gem 'omniauth-twitter'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.3'
 # Use sqlite3 as the database for Active Record
