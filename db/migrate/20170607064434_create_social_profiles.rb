@@ -16,5 +16,6 @@ class CreateSocialProfiles < ActiveRecord::Migration[5.0]
 
       t.timestamps
     end
+    add_index :social_profiles, [:provider, :uid], unique: true
   end
 end
