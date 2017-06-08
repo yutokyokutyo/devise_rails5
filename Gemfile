@@ -6,7 +6,9 @@ git_source(:github) do |repo_name|
 end
 
 gem 'devise'
-gem 'omniauth-twitter'
+gem 'omniauth-line'
+gem 'faker'
+gem 'pry'
 gem 'rails', '~> 5.0.3'
 gem 'sqlite3'
 gem 'puma', '~> 3.0'
